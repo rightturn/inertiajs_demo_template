@@ -18,10 +18,10 @@ Route::get('/', function () {
     return Inertia::render('Test');
 });
 
-// Route::get('/users', function () {
-//     return Inertia::render('Users');
-// });
+Route::get('/users', function () {
+    return Inertia::render('Users');
+});
 
-// Route::get('/settings', function () {
-//     return Inertia::render('Settings');
-// });
+Route::get('/settings', function () {
+    return Inertia::render('Settings');
+});
