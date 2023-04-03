@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SettingsController;
+use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,16 +14,8 @@ use Inertia\Inertia;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+ */
 
-Route::get('/', function () {
-    return Inertia::render('Test');
-});
-
-Route::get('/users', function () {
-    return Inertia::render('Users');
-});
-
-Route::get('/settings', function () {
-    return Inertia::render('Settings');
-});
+Route::get('/', [HomeController::class, "index"]);
+Route::get('/users', [UsersController::class, "index"]);
+Route::get('/settings', [SettingsController::class, "index"]);

@@ -1,4 +1,6 @@
 const mix = require('laravel-mix');
+const cssImport = require('postcss-import');
+const cssNesting = require('postcss-nesting');
 
 /*
  |--------------------------------------------------------------------------
@@ -14,6 +16,9 @@ const mix = require('laravel-mix');
 mix.js('resources/js/app.js', 'public/js')
     .vue()
     .postCss('resources/css/app.css', 'public/css', [
-        //
+    // prettier-ignore
+    // cssImport(),
+    // cssNesting(),
+    require('tailwindcss'),
     ])
     .version();
