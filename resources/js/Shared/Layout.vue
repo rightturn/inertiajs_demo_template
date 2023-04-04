@@ -74,7 +74,7 @@
                             <Link
                                 href="/"
                                 :class="
-                                    this.$page.component == 'Home' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                                    $page.component == 'Home' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'
                                 "
                                 class="rounded-md px-3 py-2 text-sm font-medium"
                                 >Home</Link
@@ -82,7 +82,7 @@
                             <Link
                                 href="/users"
                                 :class="
-                                    this.$page.component == 'Users' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                                    $page.component == 'Users' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'
                                 "
                                 class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                                 >Users</Link
@@ -90,9 +90,7 @@
 
                             <Link
                                 href="/settings"
-                                :class="
-                                    this.$page.component == 'Settings' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                                "
+                                :class="$page.component == 'Settings' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'"
                                 class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                                 >Settings</Link
                             >
